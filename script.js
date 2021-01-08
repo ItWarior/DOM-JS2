@@ -201,13 +201,51 @@ bobb = bobb.slice(0, 2);
 console.log(bobb);
 // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice перетворіть масив в [1, 4, 5].
 let cool = [1, 2, 3, 4, 5];
-let li = cool.slice(0,-2);
-console.log(li);
+cool.splice(1,2);
+console.log(cool);
 // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 2, 3, 'a', 'b', 'c', 4, 5].
+let arr2 = [1, 2, 3, 4, 5];
+arr2.splice(3, 0, 'a', 'b', 'c');
+console.log(arr2);
 // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
+let arr3 = [1, 2, 3, 4, 5];
+arr3.splice(1, 0, 'a', 'b');
+arr3.splice(6, 0, 'c');
+arr3.splice(arr3.length, 0, 'e');
+console.log(arr3);
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+let arr4 = [];
+for (let i = 0; i < 10; i++){
+   let num = Math.floor(Math.random() * 100);
+   arr4.push(num);
+   if (num % 2 === 0) {
+      console.log(num);
+   }
+}
+
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу та push () скопіювати значення одного масиву в інший
+let arr5 = [];
+let arr6 = [];
+for (let i = 0; i < 10; i++){
+   let num = Math.floor(Math.random() * 100);
+   arr5.push(num);
+}
+for (let i = 0; i < arr5.length; i++){
+   arr6.push(arr5[i])
+}
+console.log(arr6)
+
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
+let arr7 = [];
+let arr8 = [];
+for (let i = 0; i < 10; i++){
+   let num = Math.floor(Math.random() * 100);
+   arr7.push(num);
+}
+for (let i = 0; i < arr7.length; i++){
+   arr8[i] = arr7[i];
+}
+console.log(arr8)
 
 
 // ============
