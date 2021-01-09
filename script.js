@@ -142,7 +142,7 @@ console.log(strrr);
 let g = 0;
 let strWhile = "";
 while (g < arr.length) {
-   strWhile += arr[g]; 
+   strWhile += arr[g];
    g++
 }
 console.log(strWhile);
@@ -170,7 +170,7 @@ console.log(strDoWhile);
 // - Дан масив ['a', 'b', 'c']. Додайте йому в кінець елементи 1, 2, 3 за допомогою циклу.
 let grot = ['a', 'b', 'c'];
 for (let i = 0; i < 3; i++) {
-   grot.push(i+1);
+   grot.push(i + 1);
 }
 console.log(grot);
 // - Дан масив [1, 2, 3]. Зробіть з нього новий масив [3, 2, 1].
@@ -201,7 +201,7 @@ bobb = bobb.slice(0, 2);
 console.log(bobb);
 // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice перетворіть масив в [1, 4, 5].
 let cool = [1, 2, 3, 4, 5];
-cool.splice(1,2);
+cool.splice(1, 2);
 console.log(cool);
 // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 2, 3, 'a', 'b', 'c', 4, 5].
 let arr2 = [1, 2, 3, 4, 5];
@@ -215,7 +215,7 @@ arr3.splice(arr3.length, 0, 'e');
 console.log(arr3);
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 let arr4 = [];
-for (let i = 0; i < 10; i++){
+for (let i = 0; i < 10; i++) {
    let num = Math.floor(Math.random() * 100);
    arr4.push(num);
    if (num % 2 === 0) {
@@ -226,11 +226,11 @@ for (let i = 0; i < 10; i++){
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу та push () скопіювати значення одного масиву в інший
 let arr5 = [];
 let arr6 = [];
-for (let i = 0; i < 10; i++){
+for (let i = 0; i < 10; i++) {
    let num = Math.floor(Math.random() * 100);
    arr5.push(num);
 }
-for (let i = 0; i < arr5.length; i++){
+for (let i = 0; i < arr5.length; i++) {
    arr6.push(arr5[i])
 }
 console.log(arr6)
@@ -238,49 +238,244 @@ console.log(arr6)
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
 let arr7 = [];
 let arr8 = [];
-for (let i = 0; i < 10; i++){
+for (let i = 0; i < 10; i++) {
    let num = Math.floor(Math.random() * 100);
    arr7.push(num);
 }
-for (let i = 0; i < arr7.length; i++){
+for (let i = 0; i < arr7.length; i++) {
    arr8[i] = arr7[i];
 }
 console.log(arr8)
 
 
 // ============
+console.log("=====================");
 
 // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
+let bigMas = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 // 1. перебрати його циклом while
+let o = 0;
+while (o < bigMas.length) {
+   console.log(bigMas[o]);
+   o++;
+}
 // 2. перебрати його циклом for
+for (let i = 0; i < bigMas.length; i++) {
+   console.log(bigMas[i]);
+}
 // 3. перебрати циклом while та вивести  числа тільки з непарним індексом
+let p = 0;
+while (p < bigMas.length) {
+   if (p % 2 > 0) {
+      console.log(p + " index");
+      console.log(bigMas[p]);
+   }
+   p++;
+}
 // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+for (let i = 0; i < bigMas.length; i++) {
+   if (i % 2 > 0) {
+      console.log(i + " index");
+      console.log(bigMas[i]);
+   }
+}
 // 5. перебрати циклом while та вивести  числа тільки парні  значення
+
+let v = 0;
+while (v < bigMas.length) {
+   if (bigMas[v] % 2 === 0) {
+      console.log(v + " index");
+      console.log(bigMas[v]);
+   }
+   v++;
+}
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
+for (let i = 0; i < bigMas.length; i++) {
+   if (bigMas[i] % 2 === 0) {
+      console.log(i + " index");
+      console.log(bigMas[i]);
+   }
+}
 // 7. замінити кожне число кратне 3 на слово "okten"
+for (let i = 0; i < bigMas.length; i++) {
+   if (bigMas[i] % 3 === 0) {
+      console.log(i + " index");
+      console.log(bigMas[i] = "okten");
+   }
+}
+bigMas = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 // 8. вивести масив в зворотньому порядку.
+for (let i = bigMas.length - 1; i >= 0; i--) {
+   console.log(bigMas[i]);
+}
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+// зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
+// 1. перебрати його циклом while
+console.log("----------------");
+let o1 = bigMas.length - 1;
+while (o1 >= 0) {
+   console.log(bigMas[o1]);
+   o1--;
+}
+// 2. перебрати його циклом for
+for (let i = bigMas.length - 1; i >= 0; i--) {
+   console.log(bigMas[i]);
+}
+// 3. перебрати циклом while та вивести  числа тільки з непарним індексом
+let p1 = bigMas.length - 1;
+while (p1 >= 0) {
+   if (p1 % 2 > 0) {
+      console.log(p1 + " index");
+      console.log(bigMas[p1]);
+   }
+   p1--;
+}
+// 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+console.log("----------------");
+for (let i = bigMas.length - 1; i >= 0; i--) {
+   if (i % 2 > 0) {
+      console.log(i + " index");
+      console.log(bigMas[i]);
+   }
+}
+// 5. перебрати циклом while та вивести  числа тільки парні  значення
+let v1 = bigMas.length - 1;
+while (v1 >= 0) {
+   if (bigMas[v1] % 2 === 0) {
+      console.log(v1 + " index");
+      console.log(bigMas[v1]);
+   }
+   v1--;
+}
+console.log("/////////////////////");
+// 6. перебрати циклом for та вивести  числа тільки парні  значення
+for (let i = bigMas.length - 1; i >= 0; i--) {
+   if (bigMas[i] % 2 === 0) {
+      console.log(i + " index");
+      console.log(bigMas[i]);
+   }
+}
+console.log("/////////////////////");
+// 7. замінити кожне число кратне 3 на слово "okten"
+for (let i = bigMas.length - 1; i >= 0; i--) {
+   if (bigMas[i] % 3 === 0) {
+      console.log(i + " index");
+      console.log(bigMas[i] = "okten");
+   }
+}
 // 10
 //  створити пустий масив та :
 // - заповнити його 50 парними числами за допомоги циклу.
+console.log("____________");
+let drop = [];
+letlenght = 50;
+while (letlenght > drop.length) {
+   let z = Math.round(Math.random() * 100);
+   if (z % 2 === 0) {
+      drop.push(z);
+   }
+}
+console.log(drop);
 // - заповнити його 50 непарними числами за допомоги циклу.
-
+console.log("____________");
+let drop1 = [];
+letlenght1 = 50;
+while (letlenght1 > drop1.length) {
+   let z = Math.round(Math.random() * 100);
+   if (z % 2 > 0) {
+      drop1.push(z);
+   }
+}
+console.log(drop1);
 
 // 1
 //  створити пустий масив та :
+console.log("____________");
 // 1. заповнити його 50 парними числами за допомоги циклу.
+let wat = [];
+for (let i = 0; i < 100; i += 2) {
+   wat.push(i);
+}
+console.log(wat);
 // 2. заповнити його 50 непарними числами за допомоги циклу.
+wat = [];
+for (let i = 0; i < 100; i++) {
+   if (i % 2 > 0) {
+      wat.push(i);
+   }
+}
+console.log(wat);
 // 3. используя Math.random заполнить массив из ???(сколько хотите) элементов.
 //  диапазон рандома 8 до 732. (но сначала пробуйте БЕЗ ДИАПАЗОНА!)
+wat = [];
+for (let i = 0; i < 10; i++) {
+   wat.push(Math.round(Math.random() * (732 - 8) + 8));
+}
+console.log(wat);
 //  2. вывести на консоль  каждый третий елемент
+for (let z = 2; z < wat.length; z += 3) {
+   console.log(wat[z]);
+}
 //  3. вывести на консоль  каждый третий елемент
 //  но при условии что его значение является парным.
+console.log("###################");
+for (let z = 2; z < wat.length; z += 3) {
+   if (wat[z] % 2 === 0) {
+      console.log(wat[z]);
+   }
+}
 //  4. вывести на консоль  каждый третий елемент
 //  но при условии что он имеет парное значение и
 //  записать их в другой массив.
+console.log("###################");
+let war2 = [];
+for (let z = 2; z < wat.length; z += 3) {
+   if (wat[z] % 2 === 0) {
+      console.log(wat[z]);
+      war2.push(wat[z]);
+   }
+}
+console.log(war2);
 //  5. Вывести каждый елемент массива у которого соседний с права элемент - парный
-//   5 масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. обрахувати середній чек.
+for (let z = 0; z < wat.length; z++) {
+   if (wat[z] % 2 === 0) {
+      if (typeof (wat[z - 1]) === "undefined")
+         console.log(wat[z]);
+      else {
+         console.log(wat[z-1]);
+      }
+   }
+}
 
+//   5 масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. обрахувати середній чек.
+console.log("(((((((((((((((((((((");
+let krok = [100, 250, 50, 168, 120, 345, 188];
+// let sum = krok.reduce(function (accumulator, currentValue) {
+//    return accumulator + currentValue /2 ;
+// }, 0);
+let sum = 0;
+for (let i = 0; i < krok.length; i++) {
+   sum += krok[i] / 2;
+}
+ console.log(sum);
 // 3 створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+let randomMas = [];
+let newRandomMas = [];
+for (let i = 0; i < 10; i++) {
+   let x = Math.round(Math.random() * 10);
+   randomMas.push(x);
+   newRandomMas.push(x*5);
+}
+console.log(randomMas);
+console.log(newRandomMas);
 // 4 створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо об'єкт є числом,
 //  додати його в інший масив.
+let mamont = [true, 25, "45", 4, false, "true", 45, 25];
+let numberArr = [];
+for (const iterator of mamont) {
+   if (typeof(iterator)==="number") {
+      numberArr.push(iterator);
+   }
+}
+console.log(mamont);
+console.log(numberArr);
